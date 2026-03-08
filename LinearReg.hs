@@ -2,10 +2,10 @@ linearReg :: [(Double, Double)] -> Either String (Double, Double)
 linearReg [] = Left "Empty list."
 linearReg points
   | denom == 0 = Left "Vertical slope: undefined."
-  | otherwise  = Right (gradient, slope)
+  | otherwise  = Right (gradient, yIntercept)
   where
-    gradient = my - slope * mx
-    slope = numer / denom
+    yIntercept = my - gradient * mx
+    gradient = numer / denom
     numer = sum . map (\(x, y) -> (x - mx) * (y - my)) $ points
     denom = sum . map (\(x, _) -> (x - mx) ^ 2) $ points
     mx = (sum . map fst $ points) / n
