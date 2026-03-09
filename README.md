@@ -1,4 +1,8 @@
 # Linear Regression - Haskell
+Check out my rewrite of [this but in Rust](https://github.com/KojoBailey/linear-regression-rs).
+
+I've created this small project for learning purposes, mostly to solidify my understanding of linear regression. I'll likely make additions to my Rust rewrite before I add anything new to this.
+
 ## Docs
 ### `linearReg`
 ```hs
